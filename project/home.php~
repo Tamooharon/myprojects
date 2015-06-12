@@ -1,0 +1,15 @@
+<?php
+//start the session
+session_start();
+
+if(isset($_SESSION['username'])) //the user is logged in
+{
+	echo "Welcome ".$_SESSION['username'];
+	echo " | <a href='logout.php'>Logout</a>";
+}
+else //the user is not logged in
+{
+	//show the login form
+	include "loginform.php";
+}
+?>

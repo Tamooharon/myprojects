@@ -1,0 +1,27 @@
+<?php
+ //require ("conn.php");
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "!kibzernesto";
+$dbselect = "eventlist";
+$conn=mysql_connect($dbhost, $dbuser, $dbpass)or die("Could not connect to the database.");
+$select=mysql_select_db($dbselect,$conn) or die("Could not select database");
+
+if (isset($_POST['submit']))
+{
+$name=$_POST['name'];
+$venue=$_POST['venue'];
+}
+if($name !=''|| $venue !='')
+{
+$query = mysql_query(INSERT INTO use(name,venue) values ($name,$venue));
+echo "Data Inserted successfully";
+   
+ else
+ {
+   die('Error: ' .mysql_error()) ;
+   }
+   }
+   
+mysql_close($conn);
+?>

@@ -1,0 +1,32 @@
+<?php
+ //require ("conn.php");
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "!kibzernesto";
+$dbselect = "eventlist";
+$conn =mysql_connect($dbhost, $dbuser, $dbpass)or die("Could not connect to the database.");
+$select=mysql_select_db($dbselect,$conn) or die("Could not select database");
+
+$id=$_POST['id'];
+$work=$_POST['work'];
+$date=$_POST['date'];
+$time=$_POST['time'];
+$venue=$_POST['venue'];
+
+$user_details= "INSERT INTO task (id,work,date,time,venue) VALUES ('$id','$work','$date','$time','$venue')";
+
+$results=mysql_query($user_details,$conn);
+ if (!$results)
+   {
+   die('Error: ' .mysql_error()) ;
+   }
+ else
+  {
+  echo "your submission was succesful";
+
+   }
+     //<a href="home.php">Back</a>
+
+   
+mysql_close($conn);
+?>

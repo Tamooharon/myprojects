@@ -1,0 +1,13 @@
+<?php
+	incude ("conn.php")
+	
+	# Delete All Rows from table
+	function deleteRows () 
+		{
+		global $conn;
+		$query = "DELETE FROM events";
+		$result = mysql_query( $query, $conn );
+		$query = "ALTER TABLE events AUTO_INCREMENT = 1";
+		$result = mysql_query( $query, $conn);
+		}
+?>

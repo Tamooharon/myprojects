@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+form
+{
+margin-left: 200px;
+margin-top: 100px;
+}
+</style>
+</head>
+<body>
+<form method="POST" action="infosub.php">
+ <link rel="stylesheet" href="bootstrap.css">
+  <table border="0" width="400">
+    <tr>
+        <td>id</td>
+        <td><input type="text" name="id"/></td>
+    </tr>
+    <tr>
+        <td>work</td>
+        <td><input type="text" name="work"/></td>
+     </tr>
+     <tr>
+        <td>Date and Time</td>
+        <td><input type="" name="date"/></td>
+    </tr>
+    <tr>
+        <td>Venue</td>
+         <td><input type="text" name="Venue"/></td>
+    </tr>
+     <tr>
+         <td><input type="submit" name="submit" value="submit"/></td>
+     </tr>
+  </table>
+</form>
+</body>
+</html>
+
